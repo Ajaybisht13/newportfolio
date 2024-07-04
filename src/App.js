@@ -1,26 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css'
+import { GlobalStyle } from './styles/global';
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "../src/components/Footer/Footer";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload the app.
-        </p>
-        <p>Successfully Deployed <code>A React application</code> to Netlify with Git actions</p>
-        <p>The way of cicd</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle></GlobalStyle>
+      <Header></Header>
+      <Main></Main>
+      <Footer></Footer>
+    </>
   );
 }
 
