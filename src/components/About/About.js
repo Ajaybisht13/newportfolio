@@ -30,7 +30,7 @@ export function About() {
             My expertise includes working with various APIs, integrating third-party libraries, and optimizing app performance. I am committed to staying updated with the latest industry trends and technologies, ensuring that my solutions are innovative and effective. My problem-solving skills, attention to detail, and collaborative mindset make me a valuable asset to any development team.</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.4 * 1000}>
-          <h3>Here are my main skills:</h3>
+          <h3>Here are my main skills :</h3>
         </ScrollAnimation>
         <div className="hard-skills">
           <div className="hability">
