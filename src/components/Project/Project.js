@@ -104,7 +104,7 @@ function Project() {
             </header>
             <div className="body">
               <h3>ADAMA India Seva Tool</h3>
-              <p>This application is developer for the internal employees of ADAMA India.</p>
+              <p>This application is developed for the internal employees of ADAMA India.</p>
             </div>
             <footer>
               <ul className="tech-list">
@@ -168,6 +168,32 @@ function Project() {
                 <li>Typescript</li>
                 <li>Html</li>
                 <li>css</li>
+              </ul>
+            </footer>
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="flipInX">
+          <div className="project">
+            <header>
+              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              <div className="project-links">
+                {/* <a href=" " target="_blank" rel="noreferrer">
+                  <img src={githubIcon} alt="Visit site" />
+                </a> */}
+                <a href="https://apps.apple.com/in/app/dieu-cars/id6639599844" target="_blank" rel="noreferrer">
+                  <img src={externalLink} alt="Visit site" />
+                </a>
+              </div>
+            </header>
+            <div className="body">
+              <h3>Dieu Cars</h3>
+              <p>This application is developed for the user for selling their number plate.</p>
+            </div>
+            <footer>
+              <ul className="tech-list">
+                <li>React Native</li>
+                <li>Readux</li>
+                <li>Push Notification</li>
               </ul>
             </footer>
           </div>
