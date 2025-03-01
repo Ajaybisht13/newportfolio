@@ -1,47 +1,47 @@
-name: React App Deployment  # Corrected workflow name
+name: React App Deployment # Name of the workflow
 
 on:
   push:
     branches:
-      - main # branch name
+      - main # Runs when code is pushed to 'main' branch
 
 jobs:
   deploy-react-to-gh-pages:
     runs-on: ubuntu-latest
     env:
-      EXAMPLE: example # environment variable
+      EXAMPLE: example # Example environment variable
 
     steps:
       # Checkout the repository content to GitHub runner
-      - name: Checkout
-        uses: actions/checkout@v4  # Updated to v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4 # Updated to latest version
 
       # Setup Node.js environment
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4  # Updated to v4 version
+      - name: Setup Node.js
+        uses: actions/setup-node@v4 # Updated to latest version
         with:
-          node-version: "21"
+          node-version: "21" # Use the latest stable version
 
-      # Cache the dependencies to speed up the build
-      - name: Cache dependencies
-        uses: actions/cache@v3  # Updated to v3
+      # Cache dependencies to speed up the build process
+      - name: Cache Dependencies
+        uses: actions/cache@v3 # Updated to latest version
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
-      # Install dependencies
-      - name: Install dependencies
-        run: npm ci  # Recommended over `npm i` for CI/CD
+      # Install dependencies using `npm ci` (faster & more reliable for CI/CD)
+      - name: Install Dependencies
+        run: npm ci
 
       # Build the React app
-      - name: Build
+      - name: Build React App
         run: npm run build
 
       # Deploy the React app to GitHub Pages
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4 # Updated to latest version
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build # Directory to deploy
